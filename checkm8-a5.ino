@@ -1,6 +1,6 @@
 #include "Usb.h"
 
-#define A5_8942
+#define A5_8940
 #include "constants.h"
 
 USB Usb;
@@ -74,9 +74,9 @@ void loop() {
       case CHECKM8_INIT_RESET:
         for(int i = 0; i < 3; i++)
         {
-          digitalWrite(6, HIGH);
+          digitalWrite(13, HIGH);
           delay(500);
-          digitalWrite(6, LOW);
+          digitalWrite(13, LOW);
           delay(500);
         }
         checkm8_state = CHECKM8_HEAP_FENG_SHUI;
@@ -99,7 +99,7 @@ void loop() {
         Usb.setUsbTaskState(USB_ATTACHED_SUBSTATE_RESET_DEVICE);
         break;
       case CHECKM8_END:
-        digitalWrite(6, HIGH);
+        digitalWrite(13, HIGH);
         Serial.println("Done!"); 
         checkm8_state = -1;
         break;
