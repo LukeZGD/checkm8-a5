@@ -1,6 +1,11 @@
 #include "Usb.h"
 
+// Change the define below to match your device.
+// 8940 = iPhone 4S, iPad 2 (except iPad2,4)
+// 8942 = iPad 2 Rev A (iPad2,4), iPad mini 1, iPod touch 5th gen
+// 8945 = iPad 3
 #define A5_8940
+
 #include "constants.h"
 
 USB Usb;
@@ -157,7 +162,7 @@ void set_global_state()
   memset(tmpbuf, 0xcc, sizeof(tmpbuf));
 
   rcode = Usb.ctrlReq_SETUP(0, 0, 0x21, 1, 0, 0, 0, 0x40);
-  //Usb.regWr(rHCTL, bmSNDTOG0);
+  Usb.regWr(rHCTL, bmSNDTOG0);
   rcode = send_out(tmpbuf, 0x40);
   Serial.print("OUT pre-packet: "); Serial.println(rcode, HEX);
   rcode = send_out(tmpbuf, 0x40);
