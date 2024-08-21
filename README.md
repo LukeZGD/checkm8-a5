@@ -2,6 +2,8 @@
 
 A more stable version of [checkm8](https://github.com/axi0mX/ipwndfu/blob/master/checkm8.py) port for S5L8940X/S5L8942X/S5L8945X based on Arduino and MAX3421E-based USB Host Shield
 
+If you are looking for checkm8-a5 for the Raspberry Pi Pico instead of Arduino, go here: https://www.reddit.com/r/LegacyJailbreak/comments/1djuprf/working_checkm8a5_on_the_raspberry_pi_pico/
+
 ## Building
 
 Follow the instructions [here](https://github.com/DSecurity/checkm8-arduino#building). Note that the patch for [USB Host Library Rev. 2.0](https://github.com/felis/USB_Host_Shield_2.0) is different.
