@@ -1,8 +1,8 @@
 # A5/A5X checkm8
 
-A more stable version of [checkm8](https://github.com/axi0mX/ipwndfu/blob/master/checkm8.py) port for S5L8940X/S5L8942X/S5L8945X based on Arduino and MAX3421E-based USB Host Shield
+A "more stable" version of [checkm8](https://github.com/axi0mX/ipwndfu/blob/master/checkm8.py) port for S5L8940X/S5L8942X/S5L8945X based on Arduino and MAX3421E-based USB Host Shield
 
-If you are looking for checkm8-a5 for the Raspberry Pi Pico instead of Arduino, go here: https://www.reddit.com/r/LegacyJailbreak/comments/1djuprf/working_checkm8a5_on_the_raspberry_pi_pico/
+If you are looking for checkm8-a5 for the Raspberry Pi Pico instead of Arduino, go here: https://github.com/LukeZGD/Legacy-iOS-Kit/wiki/checkm8-a5
 
 ## Building
 

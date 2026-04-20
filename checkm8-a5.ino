@@ -8,6 +8,9 @@
 
 #include "constants.h"
 
+// 13 is onboard LED, feel free to set this to another value if needed
+const uint8_t LED_PIN = 13;
+
 USB Usb;
 USB_DEVICE_DESCRIPTOR desc_buf;
 uint8_t rcode;
@@ -41,6 +44,7 @@ void setup() {
   if(Usb.Init() == -1)
     Serial.println("usb init error");
   delay(200);
+  pinMode(LED_PIN, OUTPUT);
 }
 
 void loop() {
@@ -79,9 +83,9 @@ void loop() {
       case CHECKM8_INIT_RESET:
         for(int i = 0; i < 3; i++)
         {
-          digitalWrite(13, HIGH);
+          digitalWrite(LED_PIN, HIGH);
           delay(500);
-          digitalWrite(13, LOW);
+          digitalWrite(LED_PIN, LOW);
           delay(500);
         }
         checkm8_state = CHECKM8_HEAP_FENG_SHUI;
@@ -104,7 +108,7 @@ void loop() {
         Usb.setUsbTaskState(USB_ATTACHED_SUBSTATE_RESET_DEVICE);
         break;
       case CHECKM8_END:
-        digitalWrite(13, HIGH);
+        digitalWrite(LED_PIN, HIGH);
         Serial.println("Done!"); 
         checkm8_state = -1;
         break;
